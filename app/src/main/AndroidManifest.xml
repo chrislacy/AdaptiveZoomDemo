@@ -6,15 +6,54 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:name=".MainApplication"
+        android:supportsRtl="true">
+
+        <!-- This Activity will specifies a reveal color, Bitmap drawable and image size -->
+        <activity android:name=".BitmapActivity"
+                  android:theme="@style/AppTheme.LauncherBitmap"
+                  android:label="AZ - Bitmap">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
+            <meta-data android:name="com.actionlauncher.adaptivezoom.reveal_color"
+                       android:value="@color/launch_color" />
+            <meta-data android:name="com.actionlauncher.adaptivezoom.reveal_drawable"
+                       android:resource="@mipmap/ic_launcher_round" />
+            <meta-data android:name="com.actionlauncher.adaptivezoom.reveal_image_size_dp"
+                       android:value="@dimen/adaptivezoom_image_size" />
+        </activity>
+
+        <!-- This Activity will specifies a reveal color, vector drawable and image size -->
+        <activity android:name=".VectorActivity"
+                  android:theme="@style/AppTheme.LauncherVector"
+                  android:label="AZ - Vector">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <meta-data android:name="com.actionlauncher.adaptivezoom.reveal_color"
+                       android:value="@color/launch_color" />
+            <meta-data android:name="com.actionlauncher.adaptivezoom.reveal_drawable"
+                       android:resource="@drawable/ic_launcher_foreground" />
+            <meta-data android:name="com.actionlauncher.adaptivezoom.reveal_image_size_dp"
+                       android:value="@dimen/adaptivezoom_image_size" />
+        </activity>
+
+        <!-- This Activity will specifies a reveal color only -->
+        <activity android:name=".RevealActivity"
+                  android:theme="@style/AppTheme.LauncherReveal"
+                  android:label="AZ - Reveal">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <meta-data android:name="com.actionlauncher.adaptivezoom.reveal_color"
+                       android:value="@color/launch_color_alt" />
         </activity>
     </application>
 

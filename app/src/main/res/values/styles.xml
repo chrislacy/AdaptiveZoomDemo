@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.LauncherBitmap">
+        <item name="android:windowBackground">@drawable/launch_screen_bitmap</item>
+    </style>
+
+    <style name="AppTheme.LauncherVector">
+        <item name="android:windowBackground">@drawable/launch_screen_vector</item>
+    </style>
+
+    <style name="AppTheme.LauncherReveal">
+        <item name="android:windowBackground">@drawable/launch_screen_reveal</item>
+    </style>
+
+
 </resources>
